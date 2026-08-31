@@ -1,0 +1,42 @@
+<main class="not-found">
+  <div class="not-found__content">
+
+    <div class="not-found__code">
+      404
+    </div>
+
+    <div class="not-found__text">
+      <span class="not-found__badge">Página não encontrada</span>
+
+      <h1>
+        Ops! Parece que você se perdeu.
+      </h1>
+
+      <p>
+        A página que você está procurando não existe,
+        foi movida ou o endereço informado está incorreto.
+      </p>
+
+      <div class="not-found__actions">
+        <a routerLink="/" class="not-found__button not-found__button--primary">
+          Voltar para o início
+        </a>
+
+        <button
+          type="button"
+          class="not-found__button not-found__button--secondary"
+          (click)="goBack()"
+        >
+          Voltar
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="not-found__decoration">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</main>

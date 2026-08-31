@@ -1,0 +1,270 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.service-unavailable {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 2rem;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(99, 102, 241, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(59, 130, 246, 0.12),
+      transparent 30%
+    ),
+    #0f172a;
+
+  color: #f8fafc;
+}
+
+.service-unavailable__content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5rem;
+
+  width: min(100%, 1000px);
+}
+
+.service-unavailable__code {
+  position: relative;
+
+  font-size: clamp(7rem, 18vw, 14rem);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+
+  background: linear-gradient(
+    135deg,
+    #60a5fa,
+    #818cf8,
+    #a78bfa
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  user-select: none;
+}
+
+.service-unavailable__text {
+  max-width: 480px;
+}
+
+.service-unavailable__badge {
+  display: inline-block;
+
+  margin-bottom: 1.25rem;
+  padding: 0.45rem 0.85rem;
+
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  border-radius: 999px;
+
+  background: rgba(99, 102, 241, 0.1);
+
+  color: #a5b4fc;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.service-unavailable h1 {
+  margin: 0 0 1rem;
+
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.service-unavailable p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.service-unavailable__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin-top: 2rem;
+}
+
+.service-unavailable__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0 1.25rem;
+
+  border-radius: 0.65rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.service-unavailable__button:hover {
+  transform: translateY(-2px);
+}
+
+.service-unavailable__button--primary {
+  border: 1px solid transparent;
+
+  background: #6366f1;
+
+  color: #ffffff;
+}
+
+.service-unavailable__button--primary:hover {
+  background: #4f46e5;
+}
+
+.service-unavailable__button--secondary {
+  border: 1px solid #334155;
+
+  background: rgba(15, 23, 42, 0.5);
+
+  color: #e2e8f0;
+}
+
+.service-unavailable__button--secondary:hover {
+  border-color: #475569;
+
+  background: rgba(30, 41, 59, 0.7);
+}
+
+
+/*
+ * Decoração
+ */
+
+.service-unavailable__decoration {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.service-unavailable__decoration span {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #6366f1;
+
+  opacity: 0.5;
+
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.8);
+}
+
+.service-unavailable__decoration span:nth-child(1) {
+  top: 20%;
+  left: 10%;
+}
+
+.service-unavailable__decoration span:nth-child(2) {
+  top: 75%;
+  left: 80%;
+
+  width: 5px;
+  height: 5px;
+
+  background: #60a5fa;
+}
+
+.service-unavailable__decoration span:nth-child(3) {
+  top: 15%;
+  right: 15%;
+
+  width: 4px;
+  height: 4px;
+
+  background: #a78bfa;
+}
+
+
+/*
+ * Responsividade
+ */
+
+@media (max-width: 768px) {
+  .service-unavailable {
+    padding: 1.5rem;
+  }
+
+  .service-unavailable__content {
+    flex-direction: column;
+
+    gap: 2.5rem;
+
+    text-align: center;
+  }
+
+  .service-unavailable__code {
+    font-size: clamp(7rem, 30vw, 11rem);
+  }
+
+  .service-unavailable__text {
+    max-width: 550px;
+  }
+
+  .service-unavailable__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-unavailable {
+    padding: 1rem;
+  }
+
+  .service-unavailable__actions {
+    flex-direction: column;
+  }
+
+  .service-unavailable__button {
+    width: 100%;
+  }
+}
