@@ -1,0 +1,52 @@
+<main class="service-unavailable">
+  <div class="service-unavailable__content">
+
+    <div class="service-unavailable__code">
+      503
+    </div>
+
+    <div class="service-unavailable__text">
+
+      <span class="service-unavailable__badge">
+        Serviço temporariamente indisponível
+      </span>
+
+      <h1>
+        Estamos trabalhando nisso.
+      </h1>
+
+      <p>
+        O Houpper está temporariamente indisponível.
+        Nossa equipe já está trabalhando para normalizar
+        o serviço o mais rápido possível.
+      </p>
+
+      <div class="service-unavailable__actions">
+
+        <button
+          type="button"
+          class="service-unavailable__button service-unavailable__button--primary"
+          (click)="reload()"
+        >
+          Tentar novamente
+        </button>
+
+        <a
+          routerLink="/"
+          class="service-unavailable__button service-unavailable__button--secondary"
+        >
+          Voltar para o início
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="service-unavailable__decoration">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</main>
