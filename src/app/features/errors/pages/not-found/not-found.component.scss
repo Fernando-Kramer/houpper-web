@@ -26,9 +26,17 @@
       rgba(59, 130, 246, 0.12),
       transparent 30%
     ),
-    #0f172a;
+    var(--color-background);
 
-  color: #f8fafc;
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
 }
 
 .not-found__content {
