@@ -10,6 +10,6 @@ export const WEBSITE_ROUTES: Routes = [
 
     {
         path: 'corporate',
-        loadComponent: () => import('./pages/corporate/corporate.component').then(m => m.CorporateComponent)
+        loadComponent: () => import('./corporate/page/home-corporate/home-corporate.component').then(m => m.HomeCorporateComponent)
     }
 ];
